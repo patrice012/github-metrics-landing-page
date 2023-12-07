@@ -27,7 +27,7 @@
         padding-right: 1rem;
     }
 
-    .btn {
+    /* .btn {
         padding: 0;
         text-transform: inherit;
         border-color: transparent;
@@ -50,7 +50,7 @@
         background-color: transparent;
         border-color: transparent;
         outline-color: transparent;
-    }
+    } */
 
     /* .menu li > :not(ul):not(.menu-title):not(details):active, */
     .menu li > :not(ul):not(.menu-title):not(details).active,
