@@ -1,0 +1,22 @@
+@use "../../../styles/utils/mixins" as m;
+
+%colorful-btn {
+    border-radius: 0.25rem;
+    background: var(--green-light, #2ce5d8);
+    color: var(--black-100, #141414);
+    font-size: clamp(1rem, 0.875rem + 2vw, 1.5rem);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    padding-block: 0.625rem;
+    padding-inline: 1.1rem;
+    opacity: 100%;
+    transition: opacity 0.3s ease-in;
+    width: fit-content;
+    @include m.set-transition();
+    &:hover {
+        opacity: 85%;
+        @include m.set-transition($property: opacity);
+    }
+}

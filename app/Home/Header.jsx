@@ -7,7 +7,7 @@ import { Chat, HeroContent } from "./Hero";
 // import { HeaderSliderContext } from "../../contexts/headerSliderContext";
 import { useContext } from "react";
 import { HeaderSliderContext } from "@/context/headerSliderContext";
-import style from "./_header.scss";
+import style from "./_partials/_header.scss";
 
 const Header = () => {
     const { sliderData } = useContext(HeaderSliderContext);
