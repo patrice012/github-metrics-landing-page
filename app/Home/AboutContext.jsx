@@ -1,30 +1,40 @@
-import style from './_partials/_aboutContext.scss'
-import Image from 'next/image';
+import style from "./_partials/_aboutContext.scss";
+import Image from "next/image";
+import { FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa6";
+import Link from "next/link";
 
 const data = [
     {
-        url: "/about/ph_code.png",
-        text: "Context Manager",
+        component: <FaGithub />,
+        text: "Source code",
+        url: "https://github.com/patrice012/github-metrics",
     },
     {
-        url: "/about/ph_code.png",
-        text: "Research Assistant",
+        component: <FaXTwitter />,
+        text: "Twitter/X",
+        url: "https://x.com/patricedev02",
     },
     {
-        url: "/about/ph_code.png",
-        text: "Code Interpreter",
+        component: <FaGithub />,
+        text: "Github",
+        url: "https://github.com/patrice012/",
     },
     {
-        url: "/about/ph_code.png",
-        text: "Research Assistant",
+        component: <FaLinkedinIn />,
+        text: "Linkedin",
+        url: "https://www.linkedin.com/in/patrice-ok",
     },
 ];
 
-const FeatureItem = ({ url, text }) => {
+const FeatureItem = ({ component, text, url }) => {
     return (
         <div className="feature">
-            <img src={url}/>
-            <span>{text}</span>
+            <Link href={url} target="_blank">
+                {component}
+                <span>{text}</span>
+            </Link>
         </div>
     );
 };
@@ -34,9 +44,12 @@ export const Features = () => {
         <section className="about--features">
             <div className="container">
                 <h3 className="title">
-                    We are Kalami Studio, pioneering a revolutionary approach to
-                    AI interaction through cutting-edge tools and innovation.
+                    <span className="heading">GitHub-Metrics</span> dives deep
+                    into the GitHub API to bring you insightful metrics and
+                    visualizations. We access individual commits to compute
+                    accurate and granular statistics.
                 </h3>
+                <h4 className="heading connect">Let&apos;s connect</h4>
                 <div className="features">
                     {data?.map((item, index) => {
                         return <FeatureItem key={index} {...item} />;

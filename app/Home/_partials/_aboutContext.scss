@@ -1,9 +1,19 @@
+@use "./helper";
+
 .about--features {
     padding-block: calc(4rem - 4vw);
+    margin-block-end: 5rem;
+
+    & .heading {
+        @extend %colorful-btn;
+        min-width: 250px;
+        margin-inline: auto;
+        margin-block-end: 1rem;
+    }
     & .title {
         color: var(--black-100, #141414);
         text-align: center;
-        font-size: clamp(1rem, 0.7rem + 2vw, 2.5rem);
+        font-size: clamp(1rem, 0.7rem + 2vw, 2rem);
         font-style: normal;
         font-weight: 650;
         margin-inline: auto;
@@ -12,10 +22,15 @@
         line-height: clamp(14px, 13px + 5vw, 56px);
     }
 
+    & .connect {
+        text-align: center;
+        margin-bottom: 3.5rem;
+    }
+
     & .features {
         display: grid;
         display: flex;
-        padding: 32px 0px;
+        padding: 3rem 0rem;
         justify-content: space-between;
         align-items: flex-start;
         flex: 1 0 0;
@@ -37,6 +52,29 @@
         font-style: normal;
         font-weight: 400;
         line-height: 32.828px;
+        transition: all 0.3s ease-in;
+        position: relative;
+        padding: 6px 12px;
+
+        &::after {
+            position: absolute;
+            content: "";
+            height: 8px;
+            width: 100%;
+            bottom: -0.1875rem;
+        }
+        &:hover {
+            background-color: var(--green-light, #2ce5d8);
+
+            border-radius: 4px;
+            transition: all 0.3s ease-in;
+        }
+
+        & > * {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
 
         & img {
             max-width: 28px;

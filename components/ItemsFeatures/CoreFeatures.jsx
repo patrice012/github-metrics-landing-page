@@ -5,9 +5,7 @@ export const CoreFeatures = ({ imgUrl, text }) => {
                 <img src={imgUrl} alt="metrics image" />
             </div>
             <div className="text--container">
-                <p className="colorful-text">
-                    {text}
-                </p>
+                <p className="colorful-text">{text}</p>
             </div>
         </div>
     );
