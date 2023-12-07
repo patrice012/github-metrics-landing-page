@@ -1,0 +1,40 @@
+@use "../../styles/utils/mixins" as m;
+
+%_svg-indicator {
+    margin-inline: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(10rem, 9rem + 5vw, 15.5rem);
+    gap: 2rem;
+    fill: var(--gray-svg-default-fill, #4b5563);
+    filter: drop-shadow(0px 0px 6px #959da8d5);
+
+    cursor: pointer;
+    @include m.set-transition($property: filter);
+    @include m.set-transition($property: opacity);
+
+    &.active {
+        fill: var(--green-light, #2ce5d8);
+        filter: drop-shadow(0px 0px 5px #00fbeada);
+        @include m.set-transition($property: all);
+    }
+
+    &:hover {
+        opacity: 80%;
+        @include m.set-transition($property: all);
+    }
+}
+
+%loading-indicator {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    width: fit-content;
+
+    & svg {
+        @extend %_svg-indicator;
+    }
+}
