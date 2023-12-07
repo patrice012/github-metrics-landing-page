@@ -1,0 +1,13 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    & footer {
+        margin-block-start: auto;
+    }
+}
+
+.colorful-style {
+    color: var(--green-light,#2CE5D8)
+}
