@@ -66,7 +66,7 @@ export const ItemsFeatures = () => {
     };
 
     return (
-        <section className="testimonial">
+        <section className="testimonial" id="feature">
             <div className="testimonial--heading container">
                 <Heading
                     tag="Core Features"

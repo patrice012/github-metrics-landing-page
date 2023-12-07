@@ -5,6 +5,57 @@
 @layer components {
     .container {
         margin-inline: auto;
-        width: 95%;
+        width: 92%;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .card {
+        border-radius: 0.25rem;
+    }
+
+    .collapse {
+        border-radius: 0.25rem;
+    }
+
+    .collapse-title,
+    :where(.collapse > input[type="checkbox"]),
+    :where(.collapse > input[type="radio"]) {
+        padding-right: 1rem;
+    }
+
+    .btn {
+        padding: 0;
+        text-transform: inherit;
+        border-color: transparent;
+        border-radius: 0;
+        height: initial;
+        padding-left: initial;
+        padding-right: initial;
+        min-height: initial;
+        font-weight: initial;
+
+        text-decoration: none;
+        border-width: initial;
+
+        background-color: transparent;
+        color: transparent;
+        outline-color: transparent;
+    }
+
+    .btn:hover {
+        background-color: transparent;
+        border-color: transparent;
+        outline-color: transparent;
+    }
+
+    /* .menu li > :not(ul):not(.menu-title):not(details):active, */
+    .menu li > :not(ul):not(.menu-title):not(details).active,
+    .menu li > details > summary:active {
+        background-color: transparent;
+        color: initial;
     }
 }

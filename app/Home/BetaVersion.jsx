@@ -2,7 +2,7 @@ import style from "./_partials/_betaVersion.scss";
 
 export const BetaVersion = () => {
     return (
-        <section className="beta--version">
+        <section className="beta--version" id="about">
             <div className="container">
                 <h3 className="heading">GitHub-Metrics</h3>
                 <div className="text">

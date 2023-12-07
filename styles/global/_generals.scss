@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
     display: flex;
@@ -9,5 +13,5 @@ body {
 }
 
 .colorful-style {
-    color: var(--green-light,#2CE5D8)
+    color: var(--green-light, #2ce5d8);
 }

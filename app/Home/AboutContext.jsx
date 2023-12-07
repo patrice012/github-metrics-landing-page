@@ -41,7 +41,7 @@ const FeatureItem = ({ component, text, url }) => {
 
 export const Features = () => {
     return (
-        <section className="about--features">
+        <section className="about--features" id="connect">
             <div className="container">
                 <h3 className="title">
                     <span className="heading">GitHub-Metrics</span> dives deep
