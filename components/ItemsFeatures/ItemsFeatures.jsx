@@ -1,11 +1,10 @@
 "use client";
 import { useState, useEffect, useReducer } from "react";
-import { Heading } from "@components/SectionHeading/Heading";
-import { SliderLoadingIndicator } from "@components/SliderIndicator/Indicator";
-import { memo } from "react";
+import { Heading } from "../SectionHeading/Heading";
+import { SliderLoadingIndicator } from "../SliderIndicator/Indicator";
 import { data } from "./data";
-import { TestimonialCard } from "./TestimonialCard";
-import style from "./_testimonial.scss";
+import { CoreFeatures } from "./CoreFeatures";
+import style from "./_features.scss";
 
 const ACTION = {
     NEXT: "NEXT",
@@ -24,7 +23,7 @@ const reducer = (state, action) => {
     }
 };
 
-export const Testimonial = memo(() => {
+export const ItemsFeatures = () => {
     const [visibleCards, setVisibleCards] = useState([]);
     const [state, dispatch] = useReducer(reducer, 0);
 
@@ -32,7 +31,7 @@ export const Testimonial = memo(() => {
     // update visible card index
     const updateVisibleCards = () => {
         const newVisibleCards = [];
-        for (let i = state; i < state + 3; i++) {
+        for (let i = state; i < state + 2; i++) {
             // allow to show cards in circular way
             const card = data[i % data.length];
             newVisibleCards.push(card);
@@ -70,8 +69,8 @@ export const Testimonial = memo(() => {
         <section className="testimonial">
             <div className="testimonial--heading container">
                 <Heading
-                    tag="Testimonial"
-                    label="Don’t take our words for it"
+                    tag="Core Features"
+                    label="Don't take our words for it"
                 />
                 <p className="text">
                     A et in fames ornare dictum sed in amet sit. Blandit
@@ -79,10 +78,10 @@ export const Testimonial = memo(() => {
                     libero dictum. Nibh sed ornare.
                 </p>
             </div>
-            <div className="testimonial--block">
+            <div className="testimonial--block container">
                 <div className="testimonial--body">
                     {visibleCards?.map((item, index) => (
-                        <TestimonialCard key={index} {...item} />
+                        <CoreFeatures key={index} {...item} />
                     ))}
                 </div>
             </div>
@@ -97,4 +96,4 @@ export const Testimonial = memo(() => {
             )}
         </section>
     );
-});
+};

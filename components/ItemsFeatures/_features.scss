@@ -1,0 +1,106 @@
+@use "../../styles//utils/extends";
+@use "../../styles/utils/mixins" as m;
+@use "../../styles/global/" as g;
+@use "../../components/SliderIndicator/indicator";
+
+$testimonialPaddingBlock: 6.25rem;
+.testimonial {
+    padding-block: $testimonialPaddingBlock;
+    background-color: var(--black, #000);
+    // color: #fff;
+    &--heading {
+        @extend %flex-heading;
+        & .label {
+            width: max-content;
+            color: var(--white, #fff);
+        }
+
+        & .text {
+            color: var(--white, #fff);
+        }
+    }
+
+    overflow: hidden;
+}
+
+.testimonial--body {
+    padding-inline: 1rem;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    width: auto;
+
+    @include g.for-tablet-portrait-landscape-up {
+        overflow-x: initial;
+        column-gap: 5rem;
+        width: auto;
+    }
+}
+
+.bubble {
+    color: var(--black, #000);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.5rem;
+    // min-height: 390px;
+    width: fit-content;
+    @include g.for-phone-only {
+        width: auto;
+    }
+
+    &:nth-child(odd) {
+        display: none;
+        @include g.for-desktop-up {
+            display: block;
+        }
+    }
+
+    &.current {
+        opacity: 1;
+    }
+
+    & .img--container {
+        height: 20rem;
+        border: 0.2rem solid var(--chat-border, #5c5c5c);
+        border-radius: 1em;
+        transition: all 0.3s ease-in;
+        &:hover {
+            border:0.1rem solid  rgb(204, 204, 204);
+            box-shadow: 0px 0px 8px 1px rgb(204, 204, 204);
+            transition: all 0.3s ease-in;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+            border-radius: 1em;
+        }
+    }
+
+    & .text--container {
+        padding-top: 1rem;
+        font-size: clamp(1rem, 0.5rem + 1vw, 1.9rem);
+        text-align: center;
+    }
+}
+
+.testimonial {
+    & .navigation {
+        padding-block-start: 3rem;
+        margin-inline: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include g.for-tablet-portrait-landscape-up {
+            width: 564px;
+        }
+
+        & .start {
+            @extend %loading-indicator;
+        }
+    }
+}

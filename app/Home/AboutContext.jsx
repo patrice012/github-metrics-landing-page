@@ -1,4 +1,4 @@
-import style from './partials/_aboutContext.scss'
+import style from './_partials/_aboutContext.scss'
 import Image from 'next/image';
 
 const data = [
