@@ -98,9 +98,6 @@ const HeroContent = ({ headerText }) => {
                 <span className="colorful-style">
                     Reflect on your year with GitHub.
                 </span>
-                <span className="sparkle">
-                    <i></i>
-                </span>
                 <span id="slider-text">{headerText}</span>
             </h1>
             <div className="hero-contents-information">

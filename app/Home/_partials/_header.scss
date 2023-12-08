@@ -19,7 +19,7 @@ header.landing-page--header {
         width: 92% !important;
         padding-inline: 0;
     }
-    padding-block: 5rem;
+    padding-block: 3rem;
 
     &-contents {
         align-items: center;
@@ -72,7 +72,7 @@ header.landing-page--header {
     }
 
     &-heading {
-        font-size: clamp(27px, 26px + 3vw, 69px);
+        font-size: clamp(27px, 26px + 3vw, 55px);
         font-style: normal;
         font-weight: 850;
         line-height: 1.35;
