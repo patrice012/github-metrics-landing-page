@@ -1,3 +1,5 @@
+@use "../../styles/global/" as g;
+
 .logo {
     color: var(--black-200, #1f1f1f);
     font-weight: bolder;
@@ -15,4 +17,35 @@
     align-items: center;
     justify-content: flex-end;
     gap: 2rem;
+}
+
+.navbar-end {
+    @include g.mobile-menu-view {
+        display: none;
+    }
+}
+
+.mobile {
+    display: none;
+    position: relative;
+    @include g.mobile-menu-view {
+        display: block;
+    }
+
+    & .dropdown-content {
+        position: absolute;
+        right: -0.6875rem;
+    }
+
+    & .btn {
+        color: black;
+        background-color: #f2f2f2;
+        width: 50px;
+        height: 50px;
+        border-radius: 6.25rem;
+    }
+
+    & svg {
+        font-size: 1.4rem;
+    }
 }

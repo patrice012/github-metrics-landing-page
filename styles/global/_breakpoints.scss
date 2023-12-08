@@ -36,7 +36,7 @@
 }
 
 @mixin mobile-menu-view {
-    @media (max-width: 64rem) {
+    @media (max-width: 40.625rem) {
         @content;
     }
 }
