@@ -23,7 +23,7 @@ header.landing-page--header {
 
     &-contents {
         align-items: center;
-        padding-block: 4rem;
+        padding-block: clamp(2.2rem, 1.6rem + 1.5vw, 4rem);
         display: flex;
         flex-direction: column;
         gap: 3rem;
@@ -53,17 +53,22 @@ header.landing-page--header {
             flex-direction: column;
             align-items: flex-start;
 
+            @include g.for-tablet-portrait-landscape-up {
+                width: 80%;
+            }
+
             @include g.for-tablet-portrait-up {
                 align-self: flex-start;
             }
 
             & p {
                 color: #b1b7bf;
-                font-size: clamp(1.2rem, 1rem + 3vw, 1.4rem);
+                font-size: clamp(1.2rem, 0.6rem + 2vw, 1.4rem);
                 font-style: normal;
                 font-weight: 400;
                 line-height: 2.5rem;
                 text-transform: capitalize;
+                text-align: center;
                 @include g.for-desktop-up {
                     text-align: start;
                 }
@@ -72,16 +77,16 @@ header.landing-page--header {
     }
 
     &-heading {
-        font-size: clamp(27px, 26px + 3vw, 55px);
+        font-size: clamp(24px, 22px + 2.2vw, 50px);
         font-style: normal;
         font-weight: 850;
         line-height: 1.35;
         letter-spacing: clamp(0.2px, 0.5vw, 2.08px);
         color: var(--white-color, #fff);
 
-        @include g.for-tablet-portrait-up {
-            text-align: center;
-        }
+        text-align: center;
+        // @include g.for-tablet-portrait-up {
+        // }
 
         #slider-text {
             font-size: 88%;
@@ -125,10 +130,12 @@ header.landing-page--header {
         justify-content: center;
         align-items: center;
         gap: 1.3em;
-        width: 100%;
+        margin-inline: auto;
+        // width: 100%;
 
         @include g.for-desktop-up {
             justify-content: flex-start;
+            margin-inline: 0;
         }
 
         & > div {
@@ -137,15 +144,26 @@ header.landing-page--header {
                 text-align: center;
             }
         }
+
+        & .btn {
+            padding-inline: 1rem;
+            background-color: var(--white-color, #fff);
+            color: var(--blue-900, #0d0e19);
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease-in;
+
+            &:hover {
+                background-color: var(--gray-300, #f3f3f3);
+                transition: all 0.3s ease-in;
+            }
+        }
     }
 
     // demo part
     .demo {
-        max-width: 100%;
-
-        // @include g.breakpoint-down(large) {
-        //     margin-block-start: 3rem;
-        // }
+        width: 100%;
+        height: 100%;
 
         @include g.for-big-desktop {
             grid-column: 2/ -1;
@@ -157,13 +175,11 @@ header.landing-page--header {
         // stack element
         .stack {
             padding-block-start: 1rem;
-            .chat-2,
-            .chat-3 {
-                & img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
+            margin-block-start: 3rem;
+            width: 100%;
+
+            & img {
+                width: 100%;
             }
 
             & > * {
@@ -178,13 +194,13 @@ header.landing-page--header {
             }
 
             & .second {
-                transform: translateY(-6.5%) scale(0.949);
+                transform: translateY(-8%) scale(0.949);
                 z-index: 2;
                 opacity: 0.8;
             }
 
             & .third {
-                transform: translateY(-12.5%) scale(0.9);
+                transform: translateY(-15.5%) scale(0.9);
                 z-index: 1;
                 opacity: 0.4;
             }
@@ -202,7 +218,7 @@ header.landing-page--header {
     }
 
     .chat {
-        min-height: max-content !important;
+        // min-height: max-content !important;
         width: auto;
         display: initial !important;
         background-color: var(--gray-color-700, #27344f);
@@ -211,6 +227,17 @@ header.landing-page--header {
         padding: 0 !important;
         backdrop-filter: blur(250px);
 
+        height: 19rem;
+        @include g.for-phone-only {
+            height: 15rem;
+        }
+        @include g.for-tablet-portrait-up {
+            height: clamp(15rem, 18rem + 4vw, 22rem);
+        }
+        @include g.for-desktop-up {
+                height: 18.6rem;
+            }
+
         &-2,
         &-3 {
             border: none;
@@ -218,7 +245,17 @@ header.landing-page--header {
         }
         & img {
             border-radius: 0.8rem;
-            object-fit: cover;
+            // object-fit: cover;
+            height: max-content;
+            @include g.for-phone-only {
+                height: 14.6rem;
+            }
+            @include g.for-tablet-portrait-up {
+                height: clamp(15rem, 18rem + 4vw, 22rem);
+            }
+            @include g.for-desktop-up {
+                height: 18.2rem;
+            }
         }
     }
 
@@ -352,5 +389,3 @@ header.landing-page--header {
     //     // }
     // }
 }
-
-

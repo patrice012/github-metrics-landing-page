@@ -27,16 +27,16 @@
         padding-right: 1rem;
     }
 
-    /* .btn {
-        padding: 0;
-        text-transform: inherit;
+    .btn {
+        /* padding: 0; */
+        /* text-transform: inherit; */
         border-color: transparent;
-        border-radius: 0;
-        height: initial;
+        /* border-radius: 0; */
+        /* height: initial; */
         padding-left: initial;
-        padding-right: initial;
-        min-height: initial;
-        font-weight: initial;
+        padding-right: initial; 
+        /* min-height: initial; */
+        /* font-weight: initial; */
 
         text-decoration: none;
         border-width: initial;
@@ -50,7 +50,7 @@
         background-color: transparent;
         border-color: transparent;
         outline-color: transparent;
-    } */
+    } 
 
     /* .menu li > :not(ul):not(.menu-title):not(details):active, */
     .menu li > :not(ul):not(.menu-title):not(details).active,

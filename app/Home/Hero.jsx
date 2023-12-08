@@ -113,13 +113,13 @@ const HeroContent = ({ headerText }) => {
                             href="https://github.com/patrice012/github-metrics"
                             className="btn"
                         >
-                            View code on Github
+                            Code source
                         </Link>
                     </div>
                     <div className="btn-default ">
                         <Link
                             href="https://github-metrics-one.vercel.app/"
-                            className=" btn"
+                            className="btn"
                         >
                             <span>View in live</span>
                         </Link>

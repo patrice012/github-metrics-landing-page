@@ -1,4 +1,5 @@
 @use "../../../styles/utils/mixins" as m;
+@use "../../../styles/global/" as g;
 
 %colorful-btn {
     border-radius: 0.25rem;
@@ -18,5 +19,9 @@
     &:hover {
         opacity: 85%;
         @include m.set-transition($property: opacity);
+    }
+
+    @include g.for-phone-only{
+        text-align: center;
     }
 }

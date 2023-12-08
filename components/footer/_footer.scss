@@ -1,3 +1,9 @@
 footer {
     min-height: var(--footer-height);
+    background: linear-gradient(130deg, #1e2846 20%, rgb(13, 11, 34) 50%);
+
+    & * {
+        color: var(--white, #fff);
+        font-size: 1rem;
+    }
 }
