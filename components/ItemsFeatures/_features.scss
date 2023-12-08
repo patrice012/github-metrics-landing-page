@@ -63,6 +63,7 @@ $testimonialPaddingBlock: 6.25rem;
 
     & .img--container {
         height: 20rem;
+        object-fit: cover;
         border: 0.2rem solid var(--chat-border, #5c5c5c);
         border-radius: 1em;
         transition: all 0.3s ease-in;

@@ -1,8 +1,9 @@
 @use "./helper";
 
 .about--features {
-    padding-block: calc(4rem - 4vw);
-    margin-block-end: 5rem;
+    // padding-block: calc(4rem - 4vw);
+    padding-block: clamp(2.5rem, 4rem + 6.5vw, 22.25rem);
+    // margin-block-end: 5rem;
 
     & .heading {
         @extend %colorful-btn;
@@ -17,7 +18,7 @@
         font-style: normal;
         font-weight: 650;
         margin-inline: auto;
-        padding-block: clamp(3rem, 2.5rem + 2.5vw, 6.25rem);
+        padding-block-end: clamp(3rem, 2.5rem + 2.5vw, 6.25rem);
         max-width: 62.5rem;
         line-height: clamp(14px, 13px + 5vw, 56px);
     }

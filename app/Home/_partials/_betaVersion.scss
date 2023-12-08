@@ -2,8 +2,8 @@
 @use "../../../styles/global/" as g;
 
 .beta--version {
-    padding-block-start: clamp(2.5rem, 3rem + 1.5vw, 6.25rem);
-    padding-block-end: 6.25rem;
+    padding-block: clamp(2.5rem, 4rem + 6.5vw, 22.25rem);
+    // padding-block-end: 6.25rem;
 
     & > div {
         display: flex;
